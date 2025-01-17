@@ -1,0 +1,457 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+    <title>True Care Counselling</title>
+    <link
+      href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/css/bootstrap.min.css"
+      rel="stylesheet"
+      crossorigin="anonymous"
+    />
+    <script src="https://code.jquery.com/jquery-3.6.0.min.js"></script>
+    <script
+      src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.bundle.min.js"
+      integrity="sha384-YvpcrYf0tY3lHB60NNkmXc5s9fDVZLESaAA55NDzOxhy9GkcIdslK1eN7N6jIeHz"
+      crossorigin="anonymous"
+    ></script>
+    <script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.5.2/js/bootstrap.min.js"></script>
+    <script src="_mock_/mock.js"></script>
+    <link
+      rel="stylesheet"
+      href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.11.3/font/bootstrap-icons.min.css"
+    />
+    <link rel="stylesheet" href="./css/main.css"/>
+  </head>
+  <body>
+    <!--Heade starts from here-->
+    <header>
+      <nav class="navbar navbar-expand-sm justify-content-center">
+        <div class="container-md justify-content-space-around">
+          <a class="navbar-brand" href="#">
+            <img
+              src="./images/logo.jpeg"
+              alt="Logo"
+              width="169"
+              height="auto"
+              class="d-inline-block align-text-top"
+            />
+          </a>
+  
+          <ul class="navbar-nav fw-bold">
+            <li class="nav-item">
+              <a class="nav-link text-dark" href="#">Home</a>
+            </li>
+            <li class="nav-item">
+              <a class="nav-link text-dark" href="#">About</a>
+            </li>
+  
+            <li class="nav-item dropdown">
+              <a
+                class="nav-link dropdown-toggle text-dark"
+                href="#"
+                id="navbardrop"
+                data-bs-toggle="dropdown"
+              >
+                Our Services
+              </a>
+              <div class="dropdown-menu">
+                <a class="dropdown-item" href="#">Link 1</a>
+                <a class="dropdown-item" href="#">Link 2</a>
+                <a class="dropdown-item" href="#">Link 3</a>
+              </div>
+            </li>
+            <li class="nav-item">
+              <a class="nav-link text-dark" href="#">Internship</a>
+            </li>
+            <li class="nav-item">
+              <a class="nav-link text-dark" href="#">Blog</a>
+            </li>
+            <li class="nav-item">
+              <a class="nav-link text-dark" data-bs-toggle="modal" href="#contactUsModal" onclick="bindFormData()">Contact</a>
+            </li>
+            <li class="nav-item d-flex align-items-center">
+              <i class="bi bi-power fs-5 m-l-2 login-icon" title="Login"></i>
+            </li>
+          </ul>
+        </div>
+      </nav>
+    </header>
+      
+    <!--Slider starts from here-->
+    <div class="container-fluid">
+      <div id="carouselExampleIndicators" class="carousel slide">
+        <div class="carousel-indicators">
+          <button
+            type="button"
+            data-bs-target="#carouselExampleIndicators"
+            data-bs-slide-to="0"
+            class="active"
+            aria-current="true"
+            aria-label="Slide 1"
+          ></button>
+          <button
+            type="button"
+            data-bs-target="#carouselExampleIndicators"
+            data-bs-slide-to="1"
+            aria-label="Slide 2"
+          ></button>
+          <button
+            type="button"
+            data-bs-target="#carouselExampleIndicators"
+            data-bs-slide-to="2"
+            aria-label="Slide 3"
+          ></button>
+        </div>
+        <div class="carousel-inner main-slider">
+          <div class="carousel-item active">
+            <img
+              class="d-block w-100 slide-img"
+              src="./images/img1.jpeg"
+              alt="First slide"
+            />
+          </div>
+          <div class="carousel-item">
+            <img
+              class="d-block w-100 slide-img"
+              src="./images/img2.jpeg"
+              alt="Second slide"
+            />
+          </div>
+          <div class="carousel-item">
+            <img
+              class="d-block w-100 slide-img"
+              src="./images/img3.jpeg"
+              alt="Third slide"
+            />
+          </div>
+        </div>
+        <button
+          class="carousel-control-prev"
+          type="button"
+          data-bs-target="#carouselExampleIndicators"
+          data-bs-slide="prev"
+        >
+          <span class="carousel-control-prev-icon" aria-hidden="true"></span>
+          <span class="visually-hidden">Previous</span>
+        </button>
+        <button
+          class="carousel-control-next"
+          type="button"
+          data-bs-target="#carouselExampleIndicators"
+          data-bs-slide="next"
+        >
+          <span class="carousel-control-next-icon" aria-hidden="true"></span>
+          <span class="visually-hidden">Next</span>
+        </button>
+      </div>
+    </div>
+    <!--Cards starts from here-->
+    <div class="container-md">
+      <div class="row mt-4 mx-auto d-flex text-center py4 mt-5">
+        <h4 class="elementor-title">Counselling Services In Panchkula</h4>
+      </div>
+      <div class="row row-cols-1 row-cols-md-3 g-4 py-5" id="card-div">
+      </div>
+    </div>
+    <!--Testimonials starts from here-->
+    <div class="container-md">
+      <div class="row mt-2 mx-auto d-flex text-center">
+        <h4 class="elementor-title">What People Say</h4>
+      </div>
+
+      <div id="carouselTestimonials" class="carousel slide mt-5">
+        <div class="carousel-indicators mb-0">
+          <button
+            type="button"
+            data-bs-target="#carouselTestimonials"
+            data-bs-slide-to="0"
+            class="active"
+            aria-current="true"
+            aria-label="Slide 1"
+          ></button>
+          <button
+            type="button"
+            data-bs-target="#carouselTestimonials"
+            data-bs-slide-to="1"
+            aria-label="Slide 2"
+          ></button>
+        </div>
+        <div class="carousel-inner casnel">
+         
+        </div>
+        <button
+          class="carousel-control-prev"
+          type="button"
+          data-bs-target="#carouselTestimonials"
+          data-bs-slide="prev"
+        >
+          <span class="carousel-control-prev-icon" aria-hidden="true"></span>
+          <span class="visually-hidden">Previous</span>
+        </button>
+        <button
+          class="carousel-control-next"
+          type="button"
+          data-bs-target="#carouselTestimonials"
+          data-bs-slide="next"
+        >
+          <span class="carousel-control-next-icon" aria-hidden="true"></span>
+          <span class="visually-hidden">Next</span>
+        </button>
+      </div>
+    </div>
+
+    <!--Footer starts from here-->
+    <footer class="bd-footer mt-5 bg-light">
+      <div class="container-fluid">
+        <div class="row">
+          <div class="col-lg-4 mb-3 text-center">
+            <div class="hfe-site-logo">
+              <img src="images/footerlogo.jpeg" alt="footer logo" />
+            </div>
+            <div class="p-4">
+              <img src="images/scan-1.png" class="scan-img" alt="footer logo" />
+            </div>
+          </div>
+          <div class="col-lg-4 mb-3 footer-background p-4">
+            <div>
+              <h4 class="footer-title">Get In Touch.</h4>
+              <p>
+                Lorem ipsum dolor sit amet, consectetur adipisicing elit.
+                Consequatur animi fugit ea ducimus ipsam modi quas nostrum
+                dolorem! Iure aut a atque. Nam, repellendus excepturi, vitae
+                ullam optio iste temporibus quod nisi consequatur assumenda modi
+                ipsam unde. Deserunt, eveniet dolor?
+              </p>
+            </div>
+            <h4 class="footer-title-sm">Follow Us</h4>
+            <div>
+              <button type="button" class="btn icon-facebook">
+                <i class="bi bi-facebook text-white"></i>
+              </button>
+              <button type="button" class="btn icon-instagram">
+                <i class="bi bi-instagram text-white"></i>
+              </button>
+              <button type="button" class="btn icon-linkedin">
+                <i class="bi bi-linkedin text-white"></i>
+              </button>
+              <button type="button" class="btn icon-x">
+                <i class="bi bi-twitter-x text-white"></i>
+              </button>
+              <button type="button" class="btn icon-pintrest">
+                <i class="bi bi-pinterest text-white"></i>
+              </button>
+            </div>
+          </div>
+          <div class="col-lg-4 mb-3 footer-background p-4">
+            <div class="text-center">
+              <h4 class="footer-title">Contact Us</h4>
+            </div>
+            <div class="py-3">
+              <ul class="w-100">
+                <li class="list-group-item mt-2 me-2"><i class="bi bi-telephone-fill mx-3"></i> 
+              <span>+91-7065417417</span>
+                </li>
+                <li class="list-group-item mt-2"><i class="bi bi-telephone-fill mx-3"></i>
+                  <span>+91-7065417417</span>
+                </li>
+                <li class="list-group-item mt-2"> <i class="bi bi-envelope-arrow-up mx-3"></i></i>
+                  <span>test@gmail.com</span>
+                </li>
+                <li class="list-group-item mt-2"> <i class="bi bi-geo-alt-fill mx-3"></i></i>
+                  <span>C-22, 1st Floor, Sector 2, Maharashtra, Pune. 411027</span>
+                </li>
+            </ul>
+            </div>
+          </div>
+        </div>
+      </div>
+    </footer>
+
+    <!-- Modal -->
+<div class="modal fade" id="contactUsModal" tabindex="-1" aria-labelledby="contactUsModalLabel" aria-hidden="true">
+  <div class="modal-dialog">
+    <div class="modal-content">
+      <div class="modal-header">
+        <h5 class="modal-title" id="contactUsModalLabel">Contact Us</h5>
+        <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+      </div>
+      <div class="modal-body">
+        <form action="#">
+          <div class="mb-3 row">
+            <label for="fullName" class="col-sm-3 col-form-label">Full Name</label>
+             <div class="col-sm-9">
+               <input type="text" class="form-control" id="fullName" name="fullName" placeholder="Full Name" value="">
+             </div>
+           </div>
+            <div class="mb-3 row">
+               <label for="staticEmail" class="col-sm-3 col-form-label">Email</label>
+                <div class="col-sm-9">
+                  <input type="text" class="form-control" id="staticEmail" name="staticEmail" placeholder="email@example.com" value="">
+                </div>
+            </div>
+          <div class="mb-3 row">
+            <label for="phoneNumber" class="col-sm-3 col-form-label">Phone Number</label>
+            <div class="col-sm-9">
+              <input type="text" class="form-control" id="phoneNumber" placeholder="+919999999999">
+            </div>
+          </div>
+          <div class="mb-3 row">
+            <label for="maleRadio" class="col-sm-3 col-form-label">Gender</label>
+            <div class="col-sm-9">
+              <div class="form-check form-check-inline">
+                <input type="radio" class="form-check-input" type="radio" name="genderRadio" id="maleRadio">
+                <label class="form-check-label" for="maleRadio">
+                  Male
+                </label>
+              </div>
+              <div class="form-check form-check-inline">
+                <input type="radio" class="form-check-input" type="radio" name="genderRadio" id="femaleRadio">
+                <label class="form-check-label" for="femaleRadio">
+                  Female
+                </label>
+              </div>
+          </div>
+       
+        </div>
+        <div class="mb-3 row">
+          <label for="selectCountry"  class="col-sm-3 col-form-label">Country</label>
+          <div class="col-sm-9">  
+             <select name="selectCountry" id="selectCountry" class="form-select form-select-sm"></select>
+            </div>
+        </div>
+        <div class="mb-3 row">
+          <label for="selectState"  class="col-sm-3 col-form-label">State</label>
+          <div class="col-sm-9">  
+             <select name="selectState" id="selectState" class="form-select form-select-sm"></select>
+            </div>
+        </div>
+        <div class="mb-3 row">
+          <label for="selectCity"  class="col-sm-3 col-form-label">City</label>
+          <div class="col-sm-9">  
+             <select name="selectCity" id="selectCity" class="form-select form-select-sm"></select>
+            </div>
+        </div>
+        </form>
+      </div>
+      <div class="modal-footer">
+        <button type="button" class="btn btn-secondary" data-bs-dismiss="modal">Close</button>
+        <button type="button" class="btn btn-primary">Send</button>
+      </div>
+    </div>
+  </div>
+</div>
+
+<script>
+/////Bind dynamic card data 
+document.addEventListener("DOMContentLoaded", function () {
+  const cardContainer = document.getElementById("card-div");
+          cardData.forEach((result) => {
+            const content = `
+                <div class="col">
+                         <div class="card border-1 shadow-sm p-3 mb-5 bg-white rounded">
+                 <img
+                      src="${result.card_image}"
+                      class="card-img-top rounded-3"
+                      alt="Depression"
+                 />
+                    <div class="card-body text-center">
+                       <h5 class="card-title elementor-title">${result.card_title}</h5>
+                       <p class="card-text">
+                              ${result.card_desc}
+                        </p>
+                      <a href="#" class="btn outline-secondary">Read more</a>
+                    </div>
+                  </div>
+                </div>
+        `;
+  cardContainer.innerHTML += content;
+});
+
+if (testiMonialsData.length > 0) {
+  // Calculate the number of carousel items needed
+  const lenData =
+    testiMonialsData.length % 3 === 0
+      ? testiMonialsData.length / 3
+      : Math.floor(testiMonialsData.length / 3) + 1;
+
+  // Container for carousel items
+  const carouselContainer = document.querySelector(".casnel");
+
+  for (let i = 0; i < lenData; i++) {
+    const isActive = i === 0 ? "active" : "";
+    const testData = testiMonialsData.slice(i * 3, i * 3 + 3);
+    let content = `<div class="carousel-item ${isActive}">
+                     <div class="row row-cols-1 row-cols-md-3 g-4 p-4">`;
+
+     testData.forEach((result) => {
+      content += `
+        <div class="col">
+          <div class="card">
+            <div class="card-header bg-white">
+              <div class="float-start">
+                <img
+                  src="images/Users/${result.card_image}"
+                  alt="${result.card_title}"
+                  class="rounded testmonials-img"
+                />
+              </div>
+              <div class="float-start px-2">
+                <span class="test-user-title">${result.card_title}</span>
+                <div class="ratings">
+                  ${Array(result.Rating)
+                    .fill('<i class="bi bi-star rating-color"></i>')
+                    .join("")}
+                  ${Array(5 - result.Rating)
+                    .fill('<i class="bi bi-star"></i>')
+                    .join("")}
+                </div>
+                <span class="elementor-testimonial__title">
+                  ${result.counselling_services}
+                </span>
+              </div>
+            </div>
+            <div class="card-body text-center">
+              <p class="card-text">
+                ${result.card_desc}
+              </p>
+            </div>
+          </div>
+        </div>`;
+    });
+
+    content += `</div></div>`;
+
+    carouselContainer.innerHTML += content;
+  }
+} else {
+  console.log("No testimonials available");
+}
+})
+ ///Form Data
+  function bindFormData(){
+    countriesList.forEach(element => {
+        $('#selectCountry').append('<option value='+element.id+'>'+element.countryname+'</option>')
+     });
+  } 
+ //On coutry change code start from here
+  $('#selectCountry').on("change", function (event) {
+    $('#selectState').empty();
+    let countryValue = $('#selectCountry').val(); 
+    let stateListValues = stateLists.filter(element => element.countryid === countryValue); 
+    stateListValues.forEach(element=>{
+      $('#selectState').append('<option value='+element.stateid+'>'+element.statename+'</option>')
+    });
+  })
+///// On State change code start from here
+$('#selectState').on('change',function(event){
+  $('#selectCity').empty();
+  let selectedStateValue = $('#selectState').val();
+  let cityArrLst = cityLists.filter(element=> element.stateID === selectedStateValue);
+  cityArrLst.forEach(element=>{
+      $('#selectCity').append('<option value='+element.cityid+'>'+element.cityName+'</option>')
+  });
+});
+</script>
+</body>
+</html>
