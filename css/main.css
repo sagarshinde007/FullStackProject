@@ -1,104 +1,125 @@
 .main-slider img {
-    height: 529px;
-    width: 100%;
-    object-fit: cover;
-  }
-  .login-icon {
-    cursor: pointer;
-    font-size: large;
-    color: #fd9f40;
-  }
-  .elementor-title {
-    color: #00471c;
-  }
-  .outline-secondary:active {
-    background-color: #ffffff;
-    color: #000000;
-  }
-  .outline-secondary {
-    background-color: #fd9f40;
-    font-family: "Roboto", Sans-serif;
-    font-weight: 500;
-    fill: #ffffff;
-    color: #ffffff;
-    border-radius: 8px 8px 8px 8px;
-  }
-  i {
-    -webkit-text-stroke: 1px;
-  }
-  .testmonials-img {
-    margin-top: 5px;
-    width: 75px;
-    height: 75px;
-    border-radius: 10px;
-  }
-  .test-user-title {
-    font-family: "Rubik", Sans-serif;
-    font-size: 20px;
-    font-weight: 600;
-  }
-  .ratings {
-    margin-right: 10px;
-  }
+  height: 529px;
+  width: 100%;
+  object-fit: cover;
+}
+.login-icon {
+  cursor: pointer;
+  font-size: large;
+  color: #fd9f40;
+}
+.elementor-title {
+  color: #00471c;
+}
+.outline-secondary:active {
+  background-color: #ffffff;
+  color: #000000;
+}
+.outline-secondary,
+.img-button {
+  background-color: #fd9f40;
+  font-family: "Roboto", Sans-serif;
+  font-weight: 500;
+  fill: #ffffff;
+  color: #ffffff;
+  border-radius: 8px 8px 8px 8px;
+}
+.info-imgtext {
+  position: absolute;
+  top: 22%;
+  left: 70%;
+  text-align: center;
+}
+i {
+  -webkit-text-stroke: 1px;
+}
+.testmonials-img {
+  margin-top: 5px;
+  width: 75px;
+  height: 75px;
+  border-radius: 10px;
+}
+.test-user-title {
+  font-family: "Rubik", Sans-serif;
+  font-size: 20px;
+  font-weight: 600;
+}
+.ratings {
+  margin-right: 10px;
+}
 
-  .ratings i {
-    color: #cecece;
-    font-size: 15px;
-  }
+.ratings i {
+  color: #cecece;
+  font-size: 15px;
+}
 
-  .rating-color {
-    color: #fbc634 !important;
-  }
+.rating-color {
+  color: #fbc634 !important;
+}
 
-  .review-count {
-    font-weight: 400;
-    margin-bottom: 2px;
-    font-size: 24px !important;
-  }
-  .elementor-testimonial__title {
-    color: #000000;
-    font-family: "Roboto", Sans-serif;
-    font-size: 15px;
-  }
+.review-count {
+  font-weight: 400;
+  margin-bottom: 2px;
+  font-size: 24px !important;
+}
+.elementor-testimonial__title {
+  color: #000000;
+  font-family: "Roboto", Sans-serif;
+  font-size: 15px;
+}
 
-  .carousel-indicators [data-bs-target] {
-    margin-bottom: 0px;
-    background-color: #fd9f40;
-  }
-  .scan-img {
-    width: 150px;
-    height: 150px;
-  }
-  .footer-background {
-    background-color: #fd9f40b8;
-  }
-  .footer-title {
-    font-family: "Roboto", Sans-serif;
-    font-size: 30px;
-    font-weight: 600;
-    color: #000000;
-  }
-  .footer-title-sm {
-    font-family: "Roboto", Sans-serif;
-    font-size: 24px;
-    font-weight: 600;
-    color: #000000;
-  }
-  .icon-facebook {
-    background-color: #3b5998;
-  }
-  .icon-instagram {
-    background-color: #e4405f;
-  }
-  .icon-linkedin {
-    background-color: #0077b5;
-  }
-  .icon-x {
-    background-color: #000;
-  }
-  .icon-pintrest {
-    background-color: #bd081c;
-  }
-  .slide-img{
-    margin-top: 10px;
-  }
+.carousel-indicators [data-bs-target] {
+  margin-bottom: 0px;
+  background-color: #fd9f40;
+}
+.scan-img {
+  width: 150px;
+  height: 150px;
+}
+.footer-background {
+  background-color: #fd9f40b8;
+}
+.footer-title {
+  font-family: "Roboto", Sans-serif;
+  font-size: 30px;
+  font-weight: 600;
+  color: #000000;
+}
+.footer-title-sm {
+  font-family: "Roboto", Sans-serif;
+  font-size: 24px;
+  font-weight: 600;
+  color: #000000;
+}
+.icon-facebook {
+  background-color: #3b5998;
+}
+.icon-instagram {
+  background-color: #e4405f;
+}
+.icon-linkedin {
+  background-color: #0077b5;
+}
+.icon-x {
+  background-color: #000;
+}
+.icon-pintrest {
+  background-color: #bd081c;
+}
+.slide-img {
+  margin-top: 10px;
+}
+.carousel-item {
+  position: relative;
+}
+.image-title {
+  padding: 10px;
+  color: white;
+  background-color: #00471c;
+  margin-bottom: 5px;
+  border-radius: 7px;
+}
+.small-text {
+  margin-bottom: 5px;
+  margin-top: 0px;
+}
