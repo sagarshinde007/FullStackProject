@@ -68,7 +68,7 @@
               <a class="nav-link text-dark" href="#">Blog</a>
             </li>
             <li class="nav-item">
-              <a class="nav-link text-dark" data-bs-toggle="modal" href="#contactUsModal" onclick="bindFormData()">Contact</a>
+              <a class="nav-link text-dark" data-bs-toggle="modal" href="#contactUsModal">Contact</a>
             </li>
             <li class="nav-item d-flex align-items-center">
               <i class="bi bi-power fs-5 m-l-2 login-icon" title="Login"></i>
@@ -110,6 +110,13 @@
               src="./images/img1.jpeg"
               alt="First slide"
             />
+            <div class="info-imgtext">
+              <div class="image-title"><h1>Heal Yourself</h1>
+                <p class="small-text">just one click away</p>
+                <a href="#" class="btn img-button" data-bs-toggle="modal" href="#contactUsModal">Contact US</a>
+              </div>
+             
+            </div>
           </div>
           <div class="carousel-item">
             <img
@@ -117,6 +124,13 @@
               src="./images/img2.jpeg"
               alt="Second slide"
             />
+            <div class="info-imgtext">
+              <div class="image-title"><h1>Heal Yourself</h1>
+                <p class="small-text">just one click away</p>
+                <a href="#" class="btn img-button" data-bs-toggle="modal" href="#contactUsModal" >Contact US</a>
+              </div>
+              
+            </div>
           </div>
           <div class="carousel-item">
             <img
@@ -124,6 +138,14 @@
               src="./images/img3.jpeg"
               alt="Third slide"
             />
+            <div class="info-imgtext">
+              <div class="image-title"><h1>Heal Yourself</h1>
+                <p class="small-text">just one click away</p>
+                <a href="#" class="btn img-button" data-bs-toggle="modal" href="#contactUsModal">Contact US</a>
+              </div>
+             
+            </div>
+            
           </div>
         </div>
         <button
@@ -269,7 +291,7 @@
     </footer>
 
     <!-- Modal -->
-<div class="modal fade" id="contactUsModal" tabindex="-1" aria-labelledby="contactUsModalLabel" aria-hidden="true">
+<div class="modal fade" id="contactUsModal" tabindex="-1" aria-labelledby="contactUsModalLabel" aria-hidden="true" data-bs-config={backdrop:true}>
   <div class="modal-dialog">
     <div class="modal-content">
       <div class="modal-header">
@@ -277,7 +299,7 @@
         <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
       </div>
       <div class="modal-body">
-        <form action="#">
+        <form action="#" id="enquiry-form">
           <div class="mb-3 row">
             <label for="fullName" class="col-sm-3 col-form-label">Full Name</label>
              <div class="col-sm-9">
@@ -285,9 +307,9 @@
              </div>
            </div>
             <div class="mb-3 row">
-               <label for="staticEmail" class="col-sm-3 col-form-label">Email</label>
+               <label for="userEmail" class="col-sm-3 col-form-label">Email</label>
                 <div class="col-sm-9">
-                  <input type="text" class="form-control" id="staticEmail" name="staticEmail" placeholder="email@example.com" value="">
+                  <input type="text" class="form-control" id="userEmail" name="userEmail" placeholder="email@example.com" value="">
                 </div>
             </div>
           <div class="mb-3 row">
@@ -300,13 +322,13 @@
             <label for="maleRadio" class="col-sm-3 col-form-label">Gender</label>
             <div class="col-sm-9">
               <div class="form-check form-check-inline">
-                <input type="radio" class="form-check-input" type="radio" name="genderRadio" id="maleRadio">
+                <input type="radio" class="form-check-input" type="radio" name="genderRadio" id="maleRadio" value="male">
                 <label class="form-check-label" for="maleRadio">
                   Male
                 </label>
               </div>
               <div class="form-check form-check-inline">
-                <input type="radio" class="form-check-input" type="radio" name="genderRadio" id="femaleRadio">
+                <input type="radio" class="form-check-input" type="radio" name="genderRadio" id="femaleRadio" value="female">
                 <label class="form-check-label" for="femaleRadio">
                   Female
                 </label>
@@ -332,11 +354,17 @@
              <select name="selectCity" id="selectCity" class="form-select form-select-sm"></select>
             </div>
         </div>
+        <div class="mb-3 row">
+          <label for="inquiryMsg" class="col-sm-3 col-form-label">Message</label>
+          <div class="col-sm-9">
+            <textarea class="form-control" id="inquiryMsg" rows="3"></textarea>
+          </div>
+         
         </form>
       </div>
       <div class="modal-footer">
-        <button type="button" class="btn btn-secondary" data-bs-dismiss="modal">Close</button>
-        <button type="button" class="btn btn-primary">Send</button>
+        <button type="button" class="btn btn-secondary close" data-bs-dismiss="modal">Close</button>
+        <button type="button" class="btn btn-primary" onclick="fnSubmitFormData(this)">Send</button>
       </div>
     </div>
   </div>
@@ -439,7 +467,10 @@ if (testiMonialsData.length > 0) {
     $('#selectState').empty();
     let countryValue = $('#selectCountry').val(); 
     let stateListValues = stateLists.filter(element => element.countryid === countryValue); 
-    stateListValues.forEach(element=>{
+    stateListValues.forEach((element,index)=>{
+      if(index===0){
+        $('#selectState').append('<option value="01">---select---</option>')
+      }
       $('#selectState').append('<option value='+element.stateid+'>'+element.statename+'</option>')
     });
   })
@@ -448,10 +479,44 @@ $('#selectState').on('change',function(event){
   $('#selectCity').empty();
   let selectedStateValue = $('#selectState').val();
   let cityArrLst = cityLists.filter(element=> element.stateID === selectedStateValue);
-  cityArrLst.forEach(element=>{
+  cityArrLst.forEach((element,index)=>{
+    if(index===0){
+        $('#selectCity').append('<option value="001">---select---</option>')
+      }
       $('#selectCity').append('<option value='+element.cityid+'>'+element.cityName+'</option>')
   });
 });
+
+debugger;
+console.log(localStorage.getItem("formData"));
+////Form Data
+function fnSubmitFormData(event){
+  debugger;
+  let userName = document.getElementById('fullName').value;
+  let email = document.getElementById('userEmail').value;
+  let phoneNumber = document.getElementById('phoneNumber').value;
+  let gender = document.querySelector('input[name="genderRadio"]').value;
+  let country = document.getElementById('selectCountry').value;
+  let state = document.getElementById('selectState').value;
+  let city = document.getElementById('selectCity').value;
+  let userMessage = document.getElementById('inquiryMsg').value;
+
+  var formData={
+    userName:userName,
+    email:email,
+    phoneNumber:phoneNumber,
+    gender:gender,
+    country:country,
+    state:state,
+    city:city,
+    userMessage:userMessage
+  }
+
+  localStorage.setItem("formData",JSON.stringify(formData));
+  alert('Your form data submitted successfully!!!');
+  $("#contactUsModal .close").click();
+  document.getElementById("enquiry-form").reset();
+}
 </script>
 </body>
 </html>
