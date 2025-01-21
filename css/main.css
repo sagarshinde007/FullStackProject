@@ -18,7 +18,7 @@
 .outline-secondary,
 .img-button {
   background-color: #fd9f40;
-  font-family: "Roboto", Sans-serif;
+  font-family: 'Roboto', Sans-serif;
   font-weight: 500;
   fill: #ffffff;
   color: #ffffff;
@@ -40,7 +40,7 @@ i {
   border-radius: 10px;
 }
 .test-user-title {
-  font-family: "Rubik", Sans-serif;
+  font-family: 'Rubik', Sans-serif;
   font-size: 20px;
   font-weight: 600;
 }
@@ -64,7 +64,7 @@ i {
 }
 .elementor-testimonial__title {
   color: #000000;
-  font-family: "Roboto", Sans-serif;
+  font-family: 'Roboto', Sans-serif;
   font-size: 15px;
 }
 
@@ -80,13 +80,13 @@ i {
   background-color: #fd9f40b8;
 }
 .footer-title {
-  font-family: "Roboto", Sans-serif;
+  font-family: 'Roboto', Sans-serif;
   font-size: 30px;
   font-weight: 600;
   color: #000000;
 }
 .footer-title-sm {
-  font-family: "Roboto", Sans-serif;
+  font-family: 'Roboto', Sans-serif;
   font-size: 24px;
   font-weight: 600;
   color: #000000;
@@ -120,6 +120,17 @@ i {
   border-radius: 7px;
 }
 .small-text {
-  margin-bottom: 5px;
+  margin-bottom: 16px;
   margin-top: 0px;
+}
+.ask-button {
+  background-color: #fd9f40;
+  color: #fff;
+  border: none;
+  padding: 0.5rem 1rem;
+  border-radius: 4px;
+  font-size: 1rem;
+  cursor: pointer;
+  text-align: center;
+  text-decoration: none;
 }

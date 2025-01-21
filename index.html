@@ -68,7 +68,7 @@
               <a class="nav-link text-dark" href="#">Blog</a>
             </li>
             <li class="nav-item">
-              <a class="nav-link text-dark" data-bs-toggle="modal" href="#contactUsModal">Contact</a>
+              <a class="nav-link text-dark" data-bs-toggle="modal" data-bs-target="#contactUsModal">Contact</a>
             </li>
             <li class="nav-item d-flex align-items-center">
               <i class="bi bi-power fs-5 m-l-2 login-icon" title="Login"></i>
@@ -113,7 +113,7 @@
             <div class="info-imgtext">
               <div class="image-title"><h1>Heal Yourself</h1>
                 <p class="small-text">just one click away</p>
-                <a href="#" class="btn img-button" data-bs-toggle="modal" href="#contactUsModal">Contact US</a>
+                <a href="#" class="ask-button" data-bs-toggle="modal" data-bs-target="#contactUsModal">Ask Us</a>
               </div>
              
             </div>
@@ -127,7 +127,7 @@
             <div class="info-imgtext">
               <div class="image-title"><h1>Heal Yourself</h1>
                 <p class="small-text">just one click away</p>
-                <a href="#" class="btn img-button" data-bs-toggle="modal" href="#contactUsModal" >Contact US</a>
+                <a href="#" class="ask-button" data-bs-toggle="modal" data-bs-target="#contactUsModal">Ask Us</a>
               </div>
               
             </div>
@@ -141,7 +141,7 @@
             <div class="info-imgtext">
               <div class="image-title"><h1>Heal Yourself</h1>
                 <p class="small-text">just one click away</p>
-                <a href="#" class="btn img-button" data-bs-toggle="modal" href="#contactUsModal">Contact US</a>
+                <a href="#" class="ask-button" data-bs-toggle="modal" data-bs-target="#contactUsModal">Ask Us</a>
               </div>
              
             </div>
@@ -168,7 +168,7 @@
         </button>
       </div>
     </div>
-    <!--Cards starts from here-->
+    <!--Cards starts from here--->
     <div class="container-md">
       <div class="row mt-4 mx-auto d-flex text-center py4 mt-5">
         <h4 class="elementor-title">Counselling Services In Panchkula</h4>
@@ -487,11 +487,10 @@ $('#selectState').on('change',function(event){
   });
 });
 
-debugger;
+
 console.log(localStorage.getItem("formData"));
 ////Form Data
 function fnSubmitFormData(event){
-  debugger;
   let userName = document.getElementById('fullName').value;
   let email = document.getElementById('userEmail').value;
   let phoneNumber = document.getElementById('phoneNumber').value;
