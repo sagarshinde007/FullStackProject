@@ -28,7 +28,7 @@
     <header>
       <nav class="navbar navbar-expand-sm justify-content-center">
         <div class="container-md justify-content-space-around">
-          <a class="navbar-brand" href="#">
+          <a class="navbar-brand" href="/">
             <img
               src="../images/logo.jpeg"
               alt="Logo"
@@ -40,7 +40,7 @@
   
           <ul class="navbar-nav fw-bold">
             <li class="nav-item">
-              <a class="nav-link text-dark" href="#">Home</a>
+              <a class="nav-link text-dark" href="/">Home</a>
             </li>
             <li class="nav-item">
               <a class="nav-link text-dark" href="/services/about-us.html">About</a>
@@ -98,12 +98,11 @@
         </div>
     </div>
      <!--Providers Data--->
-    <div class="container-md">
-        <div class="row mt-2 mx-auto d-flex text-center">
-          <h4 class="elementor-title">What People Say</h4>
-        </div>
-  
-        <div id="carouselProviders" class="carousel slide mt-5">
+     <div class="container-md">
+         <div class="row mt-5 mx-auto d-flex text-center">
+          <h4 class="elementor-title">Our Providers</h4>
+         </div>
+        <div id="carouselProviders" class="carousel slide mt-2">
           <div class="carousel-indicators mb-0">
             <button
               type="button"
@@ -119,17 +118,42 @@
               data-bs-slide-to="1"
               aria-label="Slide 2"
             ></button>
-          </div>
-          <div class="carousel-inner content-provider">
+            </div>
+               <div class="carousel-inner content-provider">
             <div class="carousel-item active">
                 <div class="row row-cols-1 row-cols-md-3 g-4 p-4">
                     <div class="col">
-                          <div class="card-body text-center">
-                              <p class="card-text">
-                                Lorem ipsum dolor sit amet consectetur adipisicing elit. Sequi quibusdam ipsam, beatae nisi sapiente dolorum praesentium nemo dicta odio asperiores.
-                              </p>
+                         <div class="card providers-card">
+                            <img src="../images/Providers/Jenifer.jpg" class="rounded-circle card-img-top"  alt="Jenifer">
+                               <div class="card-body text-center">
+                                  <h4 class="card-title">Relationship Counsellor</h4>
+                                     <p class="card-text">
+                                      (Dr. Jenier Landei)
+                                     </p>
+                               </div>
                           </div>
-                    </div>
+                     </div>
+                     <div class="col">
+                      <div class="card providers-card">
+                         <img src="../images/Providers/QuinnBrenfleck.jpg" class="rounded-circle card-img-top"  alt="Jenifer">
+                            <div class="card-body text-center">
+                               <h4 class="card-title">Depression Counsellor</h4>
+                                  <p class="card-text">
+                                   (Dr. Robin Edward)
+                                  </p>
+                            </div>
+                       </div>
+                  </div>
+                  <div class="col">
+                    <div class="card providers-card">
+                       <img src="../images/Providers/julieFortney.jpg" class="rounded-circle card-img-top"  alt="Jenifer">
+                          <div class="card-body text-center">
+                             <h4 class="card-title">Marriage Counsellor</h4>
+                                <p class="card-text">
+                                 (Dr. Julie Tovar)
+                                </p>
+                          </div>
+                     </div>
                 </div>
           </div>
           <button
@@ -151,7 +175,9 @@
             <span class="visually-hidden">Next</span>
           </button>
         </div>
-      </div>
+             </div>
+        </div>
+     </div>
     <!--Footer starts from here-->
     <footer class="bd-footer mt-5 bg-light">
       <div class="container-fluid">
