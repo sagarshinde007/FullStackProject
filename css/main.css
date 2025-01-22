@@ -27,7 +27,7 @@
 .info-imgtext {
   position: absolute;
   top: 22%;
-  left: 65%;
+  left: 62%;
   text-align: center;
 }
 i {
@@ -113,9 +113,8 @@ i {
   position: relative;
 }
 .image-title {
-  padding: 20px;
-  color: white;
-  background-color: #00471c;
+  padding: 18px;
+  color: black;
   margin-bottom: 5px;
   border-radius: 7px;
 }
@@ -136,4 +135,22 @@ i {
 }
 .cnt-buttton {
   cursor: pointer;
+}
+.img-title-text {
+  color: #000000;
+  font-family: "Roboto", sans-serif;
+  font-size: 27px;
+  font-weight: 600;
+}
+.card-img-top {
+  margin: 0 auto;
+  width: 150px;
+  border-radius: 50%;
+  height: 150px;
+  box-shadow: 0 0 10px rgb(0, 0, 0, 0.2);
+}
+.providers-card {
+  box-shadow: 0 0 10px rgb(0, 5, 0, 0.2);
+  border-radius: 2em;
+  padding: 20px;
 }
