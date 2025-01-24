@@ -38,7 +38,69 @@
             />
           </a>
   
-          <ul class="navbar-nav fw-bold">
+          <ul class="navbar-nav fw-bold">           
+            <li class="nav-item">
+              <a class="nav-link text-dark hideOnMobile" href="/">Home</a>
+            </li>
+            <li class="nav-item hideOnMobile">
+              <a class="nav-link text-dark" href="/services/about-us.html">About</a>
+            </li>
+  
+            <li class="nav-item dropdown hideOnMobile">
+              <a
+                class="nav-link dropdown-toggle text-dark"
+                href="#"
+                id="navbardrop"
+                data-bs-toggle="dropdown"
+              >
+                Our Services
+              </a>
+              <div class="dropdown-menu">
+                <a class="dropdown-item" href="#">Link 1</a>
+                <a class="dropdown-item" href="#">Link 2</a>
+                <a class="dropdown-item" href="#">Link 3</a>
+              </div>
+            </li>
+            <li class="nav-item">
+              <a class="nav-link text-dark hideOnMobile" href="#">Internship</a>
+            </li>
+            <li class="nav-item hideOnMobile">
+              <a class="nav-link text-dark" href="#">Blog</a>
+            </li>
+            <li class="nav-item cnt-buttton hideOnMobile">
+              <a class="nav-link text-dark" data-bs-toggle="modal" data-bs-target="#contactUsModal">Contact</a>
+            </li>
+            <li class="nav-item d-flex align-items-center hideOnMobile">
+              <i class="bi bi-power fs-5 m-l-2 login-icon hideOnMobile" title="Login"></i>
+            </li>
+            <li onclick="showSideBar()" class="menu-icon">
+              <svg
+                xmlns="http://www.w3.org/2000/svg"
+                height="20px"
+                viewBox="0 -960 960 960"
+                width="20px"
+                fill="#5f6368"
+              >
+                <path
+                  d="M120-240v-80h720v80H120Zm0-200v-80h720v80H120Zm0-200v-80h720v80H120Z"
+                />
+              </svg>
+            </li>
+          </ul>
+          <ul class="sidebar fw-bold">
+            <li onclick="showNavBar()">
+              <svg
+                xmlns="http://www.w3.org/2000/svg"
+                height="24px"
+                viewBox="0 -960 960 960"
+                width="24px"
+                fill="#5f6368"
+              >
+                <path
+                  d="m256-200-56-56 224-224-224-224 56-56 224 224 224-224 56 56-224 224 224 224-56 56-224-224-224 224Z"
+                />
+              </svg>
+            </li>
             <li class="nav-item">
               <a class="nav-link text-dark" href="/">Home</a>
             </li>
@@ -106,16 +168,15 @@
         <div class="carousel-inner main-slider">
           <div class="carousel-item active">
             <img
-              class="d-block w-100 slide-img"
-              src="./images/img1.jpeg"
+              class="img-fluid slide-img image-responsive"
+              src="./images/img1.jpg"
               alt="First slide"
             />
             <div class="info-imgtext">
-              <div class="image-title"><span class="img-title-text">Lets step up into healing world</span>
-                <p>Just one click away</p>
-                <a href="#" class="ask-button" data-bs-toggle="modal" data-bs-target="#contactUsModal" onclick="bindFormData()">Book Appointment</a>
-              </div>
-             
+                  <div class="image-title"><span class="img-title-text">Lets step up into healing world</span>
+                         <p>Just one click away</p>
+                         <a href="#" class="ask-button" data-bs-toggle="modal" data-bs-target="#contactUsModal" onclick="bindFormData()     ">Book    Appointment</a>
+                  </div>
             </div>
           </div>
           <div class="carousel-item">
@@ -299,80 +360,92 @@
         <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
       </div>
       <div class="modal-body">
-        <form action="#" id="enquiry-form">
+        <form action="#" id="enquiry-form" class="needs-validation" novalidate>
           <div class="mb-3 row">
             <label for="fullName" class="col-sm-3 col-form-label">Full Name</label>
              <div class="col-sm-9">
-               <input type="text" class="form-control" id="fullName" name="fullName" placeholder="Full Name" value="">
-             </div>
+               <input type="text" class="form-control" id="fullName" name="fullName" placeholder="Full Name" value="" required>
+               <div class="invalid-feedback">Please enter your full name.</div>
+              </div>
            </div>
             <div class="mb-3 row">
                <label for="userEmail" class="col-sm-3 col-form-label">Email</label>
                 <div class="col-sm-9">
-                  <input type="text" class="form-control" id="userEmail" name="userEmail" placeholder="email@example.com" value="">
+                  <input type="text" class="form-control" id="userEmail" name="userEmail" placeholder="email@example.com" value="" required>
+                  <div class="invalid-feedback">Please enter a valid email address.</div>
                 </div>
             </div>
           <div class="mb-3 row">
             <label for="phoneNumber" class="col-sm-3 col-form-label">Phone Number</label>
             <div class="col-sm-9">
-              <input type="text" class="form-control" id="phoneNumber" placeholder="+919999999999">
+              <input type="text" class="form-control" id="phoneNumber" pattern="[6789][0-9]{9}"  placeholder="9999999999" required>
+              <div class="invalid-feedback">
+                Please provide a valid Phone number.
+              </div>
             </div>
           </div>
           <div class="mb-3 row">
             <label for="maleRadio" class="col-sm-3 col-form-label">Gender</label>
             <div class="col-sm-9">
               <div class="form-check form-check-inline">
-                <input type="radio" class="form-check-input" type="radio" name="genderRadio" id="maleRadio" value="male">
+                <input type="radio" class="form-check-input" type="radio" name="genderRadio" id="maleRadio" value="male" required>
                 <label class="form-check-label" for="maleRadio">
                   Male
                 </label>
               </div>
               <div class="form-check form-check-inline">
-                <input type="radio" class="form-check-input" type="radio" name="genderRadio" id="femaleRadio" value="female">
+                <input type="radio" class="form-check-input" type="radio" name="genderRadio" id="femaleRadio" value="female" required>
                 <label class="form-check-label" for="femaleRadio">
                   Female
-                </label>
+                </label> 
               </div>
+              <div class="invalid-feedback">Please select your gender.</div>
           </div>
        
         </div>
         <div class="mb-3 row">
           <label for="selectCountry"  class="col-sm-3 col-form-label">Country</label>
           <div class="col-sm-9">  
-             <select name="selectCountry" id="selectCountry" class="form-select form-select-sm"></select>
+             <select name="selectCountry" id="selectCountry" required class="form-select form-select-sm"></select>
+             <div class="invalid-feedback">Please select country</div>
             </div>
         </div>
         <div class="mb-3 row">
           <label for="selectState"  class="col-sm-3 col-form-label">State</label>
           <div class="col-sm-9">  
-             <select name="selectState" id="selectState" class="form-select form-select-sm"></select>
+             <select name="selectState"  id="selectState" required class="form-select form-select-sm"></select>
+             <div class="invalid-feedback">Please select state</div>
             </div>
         </div>
         <div class="mb-3 row">
           <label for="selectCity"  class="col-sm-3 col-form-label">City</label>
           <div class="col-sm-9">  
-             <select name="selectCity" id="selectCity" class="form-select form-select-sm"></select>
+             <select name="selectCity"  id="selectCity" required class="form-select form-select-sm"></select>
+             <div class="invalid-feedback">Please select city</div>
             </div>
         </div>
         <div class="mb-3 row">
           <label for="inquiryMsg" class="col-sm-3 col-form-label">Message</label>
           <div class="col-sm-9">
-            <textarea class="form-control" id="inquiryMsg" rows="3"></textarea>
+            <textarea class="form-control" id="inquiryMsg" rows="3" required></textarea>
+            <div class="invalid-feedback">Please select Message</div>
           </div>
          
         </form>
       </div>
       <div class="modal-footer">
         <button type="button" class="btn btn-secondary close" data-bs-dismiss="modal">Close</button>
-        <button type="button" class="btn btn-primary" onclick="fnSubmitFormData(this)">Send</button>
+        <button type="submit" class="btn btn-primary" onclick="fnSubmitFormData(this)">Send</button>
       </div>
     </div>
   </div>
 </div>
 
 <script>
+
 /////Bind dynamic card data 
 document.addEventListener("DOMContentLoaded", function () {
+
   const cardContainer = document.getElementById("card-div");
           cardData.forEach((result) => {
             const content = `
@@ -489,7 +562,13 @@ $('#selectState').on('change',function(event){
 console.log(localStorage.getItem("formData"));
 ////Form Data
 function fnSubmitFormData(event){
-  let userName = document.getElementById('fullName').value;
+  debugger;
+  const form = document.getElementById('enquiry-form');
+  if (!form.checkValidity()) {
+    form.classList.add('was-validated');
+    return;
+  }else{
+    let userName = document.getElementById('fullName').value;
   let email = document.getElementById('userEmail').value;
   let phoneNumber = document.getElementById('phoneNumber').value;
   let gender = document.querySelector('input[name="genderRadio"]').value;
@@ -513,7 +592,18 @@ function fnSubmitFormData(event){
   alert('Your form data submitted successfully!!!');
   $("#contactUsModal .close").click();
   document.getElementById("enquiry-form").reset();
+  }
 }
+function showSideBar() {
+        const sidebar = document.querySelector(".sidebar");
+        sidebar.style.display = "flex";
+      }
+      function showNavBar() {
+        const navbar = document.querySelector(".navbar-nav");
+        navbar.style.display = "flex";
+        const sidebar = document.querySelector(".sidebar");
+        sidebar.style.display = "none";
+ }
 </script>
 </body>
 </html>
